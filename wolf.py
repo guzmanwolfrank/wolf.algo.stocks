@@ -16,6 +16,8 @@ stock = yf.Ticker(user_input)
 
 recco = stock.recommendations
 
+major = stock.major_holders
+
 allison = [stock, stock.history(period ='5d'), recco]
 
 #new = print(allison)
@@ -24,6 +26,7 @@ stock.history(period='1mo')
 
 eureka = pd.DataFrame(stock.history(period='5d'))
 
+insti = stock.institutional_holders
 
 frame = (eureka.columns.values)
 
@@ -52,8 +55,5 @@ print(first_n_column)
 
 print(recco)
 
+print(insti) 
 
-plt.plot(eureka['Close'])
-
-plt.show()
-plt.clf()
