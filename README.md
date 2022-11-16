@@ -8,5 +8,5 @@ Reports: DATA = last 5 intraday closes, analyst reccomendations from JP Morgan, 
 Prints: last 5 intraday closes, DATA in Pandas Dataframe
 
 
-Coded and designed by @Wolfrank_NY : twitter 
+
 
