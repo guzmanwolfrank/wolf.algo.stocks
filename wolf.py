@@ -2,6 +2,7 @@ import yfinance as yf
 import pandas as pd
 import plotly.graph_objects as go
 
+
 #define user input 
 
 user_input = input('Enter Stock Symbol: ')
@@ -12,34 +13,25 @@ stock = yf.Ticker(user_input)
 
 
 #Yfinance Defs 
-#recco = stock.recommendations
-#major = stock.major_holders
-#insti = stock.institutional_holders
+recco = stock.recommendations
+
 
 #look back period 
 stock.history(period='6mo') 
 eureka = pd.DataFrame(stock.history(period='90d'))
 
-frame = (eureka.columns.values)
-
 #List columns 1-5
-leff =list(frame) 
 N = 5
 data = eureka.iloc[:, :N]
 df = data
 
 df_ma = df.copy()
 
-df_ma.head(10)
-
 df_ma['MA_10'] = df_ma.Close.rolling(window=10).mean()
 
 df_ma.dropna(inplace=True)
 
 df_plot = df_ma.iloc[-100:].copy()
-
-df_plot.shape
-
 
 fig = go.Figure(data=[go.Candlestick(x=df.index,
                 open=df['Open'],
@@ -61,7 +53,6 @@ fig.add_trace(go.Scatter(x=df_plot.index,
     line_shape='spline',
     name='MA_10'
     ))
-
 fig.update_layout(width=1000,height=800,
     margin=dict(l=10,r=60,b=10,t=40),
     font=dict(size=10,color="#e1e1e1"),
@@ -70,7 +61,6 @@ fig.update_layout(width=1000,height=800,
     title =str(stock) +"chart",
     xaxis_title="Time",
     yaxis_title= "Price")
-
 fig.update_xaxes(
     gridcolor="#1f292f",
     showgrid=True,fixedrange=True,rangeslider=dict(visible=False),
@@ -83,6 +73,10 @@ fig.update_yaxes(
     gridcolor="#1f292f",
     showgrid=True
 )
-
 fig.show()
 #fig.write_image('chart.png')
+
+
+print(recco)
+
+
