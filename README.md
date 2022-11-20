@@ -1,12 +1,21 @@
 # WolfStocks
 
 language: python
-modules: 
-
-Simple program that charts 5 intraday sessions on user input stock symbol using YFinance. 
+modules: yfinance, pandas, plotly.graph_objects 
 
 
-Reports: DATA = last 5 intraday closes, analyst reccomendations from
-JP Morgan, Wunderlich etc., a list of largest institutional owners.
 
-Prints: last 5 intraday closes, DATA in Pandas Dataframe
+Simple program that charts intraday sessions on user input stock symbol using YFinance. 
+
+Indicators:  10 day moving average 
+Chart Style: Candlestick 
+
+Run 
+-Once in cmd prompt root folder, type:  py filename.py 
+-Make sure to download all modules to the venv you create to run the script. 
+-Use Firefox as default browser 
+
+
+
+
+
