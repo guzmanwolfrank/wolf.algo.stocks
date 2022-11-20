@@ -1,3 +1,8 @@
+# 10 day moving average on a stock of users choice within Yfinance Yticker library
+#coded for Firefox default browser, Windows 10 OS, Python language 
+
+
+
 import yfinance as yf
 import pandas as pd
 import plotly.graph_objects as go
