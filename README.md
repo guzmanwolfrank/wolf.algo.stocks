@@ -19,3 +19,5 @@ Run
 
 
 
+![wolfprogram](https://user-images.githubusercontent.com/29739578/202930986-d48058e0-1df5-4569-a722-42982c7b7de3.png)
+![wolfprogramcmd](https://user-images.githubusercontent.com/29739578/202930994-5078d7a5-5766-441e-9250-de010a87cabf.png)
