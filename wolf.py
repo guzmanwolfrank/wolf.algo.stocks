@@ -3,7 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 from pylab import *
 import numpy as np
-import scipy.signal as sc
 import datetime as dt
 
 
@@ -18,7 +17,6 @@ recco = stock.recommendations
 #majorholders of stock 
 major = stock.major_holders
 
-allison = [stock, stock.history(period ='5d'), recco]
 
 #set stock period, differs from dataframe time series
 stock.history(period='1mo') 
