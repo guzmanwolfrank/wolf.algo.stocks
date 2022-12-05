@@ -13,7 +13,7 @@ Chart Style: Candlestick
 Run 
 -Once in cmd prompt root folder, type:  py filename.py 
 -Make sure to download all modules to the venv you create to run the script. 
--Use Firefox as default browser 
+
 
 
 
