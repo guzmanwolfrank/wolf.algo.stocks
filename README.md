@@ -1,7 +1,13 @@
 # WolfStocks
 
 language: python
-modules: yfinance, pandas, plotly.graph_objects 
+
+#
+
+modules: 
+        yfinance
+        pandas
+        plotly.graph_objects 
 
 
 
