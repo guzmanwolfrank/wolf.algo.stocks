@@ -5,6 +5,7 @@ language: python
 #
 
 modules: 
+
         yfinance
         pandas
         plotly.graph_objects 
